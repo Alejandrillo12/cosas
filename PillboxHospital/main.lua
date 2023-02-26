@@ -1,0 +1,28 @@
+Citizen.CreateThread(function()
+  RequestIpl("gabz_pillbox_milo_")
+
+  local interiorID = GetInteriorAtCoords(311.2546, -592.4204, 42.32737)
+
+  if IsValidInterior(interiorID) then
+    RemoveIpl("rc12b_fixed")
+    RemoveIpl("rc12b_destroyed")
+    RemoveIpl("rc12b_default")
+    RemoveIpl("rc12b_hospitalinterior_lod")
+    RemoveIpl("rc12b_hospitalinterior")
+    RequestIpl('apa_distlodlights_small031') 
+    RequestIpl('apa_lodlights_small031') 
+    RequestIpl('hei_distlodlights_small031') 
+    RequestIpl('hei_lodlights_small031') 
+    RequestIpl('gabz_pillbox_dlc_milo_') 
+    RequestIpl('gabz_pillbox_ext') 
+    RequestIpl('gabz_pillbox_milo_') 
+    RequestIpl('hei_dt1_06_long_0') 
+    RequestIpl('hei_dt1_06_strm_0') 
+    RequestIpl('hei_dt1_occl_07') 
+    RequestIpl('hei_dt1_rd1_long_1') 
+    RequestIpl('hei_dt1_rd1_strm_4') 
+    RequestIpl('hei_fwy_04_strm_0') 
+    RefreshInterior(interiorID)
+    PinInteriorInMemory(interiorID)
+  end
+end)
